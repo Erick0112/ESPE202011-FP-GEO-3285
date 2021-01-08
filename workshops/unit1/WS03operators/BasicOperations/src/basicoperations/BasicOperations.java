@@ -67,7 +67,7 @@ public class BasicOperations {
          System.out.println("The division of" + dividend + "/" + divisor 
                  + "is esqual to -->" + (dividend / divisor) ); 
         
-        int reamainder;
+        
         int modulus;
          System.out.println("The modulus of" + dividend + "%" + divisor 
                  + "is esqual to -->" + (dividend % divisor) );
