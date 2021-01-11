@@ -16,13 +16,13 @@ public class MRUvelocityShort {
      */
     public static void main(String[] args) {
    
-        float dividend_metros; 
-    float divisor_tiempo;
-    float division; 
-//a car makes a trip of 50000m meters in an estimated time of 1000 sec. How fast is it traveling? 
+    short dividend_metros; 
+    short divisor_tiempo;
+    short division; 
+//a car makes a trip of 32766 m meters in an estimated time of 222 sec. How fast is it traveling? 
 
-    dividend_metros= 50000;
-    divisor_tiempo= 1000;
+    dividend_metros= 32766;
+    divisor_tiempo= 222;
    
       System.out.println("The division of" + dividend_metros + "/" + divisor_tiempo 
                  + "is esqual to -->" + (dividend_metros / divisor_tiempo));     

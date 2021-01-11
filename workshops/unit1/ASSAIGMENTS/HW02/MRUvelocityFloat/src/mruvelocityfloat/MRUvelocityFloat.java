@@ -20,10 +20,10 @@ public class MRUvelocityFloat {
     float dividend_metros; 
     float divisor_tiempo;
     float division;
-    // un automivil realiza un viaje de 200000m metros  en un tiempo estimado de 3600 seg  ¿A qué velocidad viaja? 
+    // //a car makes a trip of 200000 m meters in an estimated time of 1000 sec. How fast is it traveling?  
     
     dividend_metros= 200000;
-    divisor_tiempo= 3600;
+    divisor_tiempo= 1000;
    
       System.out.println("The division of" + dividend_metros + "/" + divisor_tiempo 
                  + "is esqual to -->" + (dividend_metros / divisor_tiempo)); 
