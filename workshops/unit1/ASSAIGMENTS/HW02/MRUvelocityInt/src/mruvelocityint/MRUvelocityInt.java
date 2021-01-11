@@ -16,9 +16,9 @@ public class MRUvelocityInt {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    float dividend_metros; 
-    float divisor_tiempo;
-    float division; 
+    int dividend_metros; 
+    int divisor_tiempo;
+    int division; 
 //a car makes a trip of 50000m meters in an estimated time of 1000 sec. How fast is it traveling? 
 
     dividend_metros= 50000;

@@ -19,10 +19,10 @@ public class MRUvelocityShort {
     short dividend_metros; 
     short divisor_tiempo;
     short division; 
-//a car makes a trip of 32766 m meters in an estimated time of 222 sec. How fast is it traveling? 
+//a car makes a trip of 3000 m meters in an estimated time of 100 sec. How fast is it traveling? 
 
-    dividend_metros= 32766;
-    divisor_tiempo= 222;
+    dividend_metros= 3000;
+    divisor_tiempo= 100;
    
       System.out.println("The division of" + dividend_metros + "/" + divisor_tiempo 
                  + "is esqual to -->" + (dividend_metros / divisor_tiempo));     
