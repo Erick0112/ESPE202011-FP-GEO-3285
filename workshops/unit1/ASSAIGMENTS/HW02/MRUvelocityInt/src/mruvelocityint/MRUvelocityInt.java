@@ -16,16 +16,16 @@ public class MRUvelocityInt {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    int dividend_metros; 
-    int divisor_tiempo;
-    int division; 
-//a car makes a trip of 50000m meters in an estimated time of 1000 sec. How fast is it traveling? 
+     short dividend_metros; 
+    short divisor_tiempo;
+    short division; 
+//a car makes a trip of 3000 m meters in an estimated time of 100 sec. How fast is it traveling? 
 
-    dividend_metros= 50000;
-    divisor_tiempo= 1000;
+    dividend_metros= 3000;
+    divisor_tiempo= 100;
    
       System.out.println("The division of" + dividend_metros + "/" + divisor_tiempo 
-                 + "is esqual to -->" + (dividend_metros / divisor_tiempo)); 
+                 + "is esqual to -->" + (dividend_metros / divisor_tiempo));   
         
     }
     
