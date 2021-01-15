@@ -28,7 +28,7 @@ public class WS06Iterations {
         System.out.println("Multiplication Tables : 29");
         int top = 29; 
         int product = 0;
-        int table = 8; 
+        int table = 29; 
         for (int j = 1 ; j <= top ; j++){
             product = table * j;
             System.out.println(" 29* " + j + " = " + product);
