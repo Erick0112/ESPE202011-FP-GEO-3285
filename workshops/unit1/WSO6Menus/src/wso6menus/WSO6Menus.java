@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ws07menus;
+package wso6menus;
 
 import java.util.Scanner;
 
@@ -11,23 +11,23 @@ import java.util.Scanner;
  *
  * @author Pc
  */
-public class WS07Menus {
+public class WSO6Menus {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
         boolean mainLoop = true;
         int option;
 
         do {
             System.out.println(" ========= Calculator =======");
-            System.out.println("1. -> Subtraction");
-            System.out.println("2. -> Addition");
+            System.out.println("1. -> difference");
+            System.out.println("2. -> addition");
             System.out.println("3. -> division");
-            System.out.println("4. -> Modulus");
+            System.out.println("4. -> multiplication");
             System.out.println("5. -> Exit");
 
             System.out.println("Enter your menu option --> ");
@@ -93,10 +93,6 @@ public class WS07Menus {
             }
 
         } while (option != 5);
-        
-            
-        
-        
     }
     
 }
