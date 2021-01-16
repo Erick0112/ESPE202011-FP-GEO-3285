@@ -9,7 +9,7 @@ package ws06iterations;
  *
  * @author Pc
  */
-public class WS06Iterations {
+public class WS05Iterations {
 
     /**
      * @param args the command line arguments
