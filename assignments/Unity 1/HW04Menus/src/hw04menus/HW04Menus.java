@@ -78,6 +78,7 @@ public class HW04Menus {
                 System.out.println("is even  -> " + i);
                 i+=2;
                 }
+                break;
                  case 5:
                     System.out.println(" Exit ");
                     System.exit(0);
