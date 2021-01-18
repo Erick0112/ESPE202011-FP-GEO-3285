@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Pc
  */
-public class WSO7Menus {
+public class WSO6Menus {
 
     /**
      * @param args the command line arguments
