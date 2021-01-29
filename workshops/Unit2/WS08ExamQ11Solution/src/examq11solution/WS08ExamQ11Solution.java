@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Pc
  */
-public class ExamQ11Solution {
+public class WS08ExamQ11Solution {
 
     /**
      * @param args the command line arguments
