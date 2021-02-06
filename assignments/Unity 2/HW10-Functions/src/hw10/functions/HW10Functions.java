@@ -35,8 +35,8 @@ public class HW10Functions {
         System.out.println("The divisor is  ---->  ");
         divisor = input.nextInt();
         float outcome = 0;
-        int variablex ;
-        int variabley ;
+        int variableX ;
+        int variableY ;
         int base;       
         System.out.println("Enter enter a base to square --->  ");
         base = input.nextInt();
@@ -58,30 +58,30 @@ public class HW10Functions {
        
         System.out.println("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°");
         
-        variabley = elevatetosquare(base);
-        System.out.println(base + "^2 -> " + variabley);
+        variableY = elevatetosquare(base);
+        System.out.println(base + "^2 -> " + variableY);
 
       
         System.out.println("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°");
       
-        variabley = elevatetosquare(-base);
-        System.out.println(-base + "^2 -> " + variabley);
+        variableY = elevatetosquare(-base);
+        System.out.println(-base + "^2 -> " + variableY);
 
      
         System.out.println("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°");
 
-      variablex = -1;
-        variabley = elevatetosquare(variablex);
-        System.out.println("the square of -> " + variablex + " <- is equal to -> " + variabley);
+      variableX = -1;
+        variableY = elevatetosquare(variableX);
+        System.out.println("the square of -> " + variableX + " <- is equal to -> " + variableY);
         
       
         System.out.println("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°");
 
-        result = elevatetosquareandadd (number);
+        result = computeParabola (number);
         System.out.println("Result of " + number + "*" + number + " + 3 * " + number + " + 4 ---> "+ result );
         
         System.out.println("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°");
-        product = multiplybythefirst12numbers(table); 
+        product = ShowTheMultiplicationTables(table); 
        
        
     }
@@ -102,7 +102,7 @@ public class HW10Functions {
         return variabley;
     }
 
-    public static int elevatetosquareandadd(int number) {
+    public static int computeParabola(int number) {
         int result = 0;
 
         result = number * number + 3 * number + 4;
@@ -110,7 +110,7 @@ public class HW10Functions {
         return result;
     }
    
-    public static int multiplybythefirst12numbers (int table ) {
+    public static int ShowTheMultiplicationTables (int table ) {
           
         int product = 0;
         int multiplier;
