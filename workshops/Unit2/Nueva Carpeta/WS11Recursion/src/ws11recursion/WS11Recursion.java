@@ -5,6 +5,8 @@
  */
 package ws11recursion;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Pc
@@ -16,7 +18,10 @@ public class WS11Recursion {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int number = 4;
+       Scanner input = new Scanner(System.in);
+        int number;
+        System.out.println("NUMBER --->  ");
+        number = input.nextInt();
         int fact = 0;
         fact = factorial(number);
         System.out.println("factorial of " + number + " is equal to -> " + fact);
