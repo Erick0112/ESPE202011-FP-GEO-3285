@@ -24,16 +24,7 @@ public class HW12Functions {
 
         do {
 
-            System.out.print("                   UNIVERSIDAD DE LAS FUERZAS ARMADAS (ESPE)\n\n       ");
-            System.out.print(" CAREER: Engineering in Geospatial Technologies\n ");
-            System.out.print("PROGRAMMING FUNDAMENTALS \n");
-            System.out.println(" NRC:3285");
-
-            System.out.println(" ========= Coordinate Transformation =======");
-            System.out.println("1.Transformation from Rectangular to Geographic Coordinates ");
-            System.out.println("2.Transformation of Geographic Coordinates to Rectangular ");
-            System.out.println("0.Exit");
-            System.out.println("Enter your menu option --> ");
+            printBannerMenu();
             option = input.nextInt();
 
             switch (option) {
@@ -58,19 +49,12 @@ public class HW12Functions {
                     } else if (x < 0 && y < 0) {
                         TransformationFromRectangularToGeographicCoordinates1(x, y);
                     } else if (x > 0 && y < 0) {
-                        angleF = (90 + angle);
-                        System.out.println("The coordinate is :  " + String.format("%.2f", Math.sqrt(p3)) + ", S" + String.format("%.2f", angleF) + "ºE");
+                        TransformationFromRectangularToGeographicCoordinates2(x, y);
                     }
                     break;
                 case 2:
                     double d;
-                    System.out.println("Enter Distance:");
-                    d = input.nextInt();
-                    System.out.println(" ======= Choose Orientation =======");
-                    System.out.println("1. North-East (NE) ");
-                    System.out.println("2. North-West (NO) ");
-                    System.out.println("3. South-West (SO) ");
-                    System.out.println("4. South-East (SE) ");
+                    d = printGeographicCoordinatesToRectangularMenu(input);
                     option = input.nextInt();
 
                     switch (option) {
@@ -114,7 +98,32 @@ public class HW12Functions {
         } while (option != 0);
     }
 
-    private static void TransformationFromRectangularToGeographicCoordinates(double x, double y) {
+    public static double printGeographicCoordinatesToRectangularMenu(Scanner input) {
+        double d;
+        System.out.println("Enter Distance:");
+        d = input.nextInt();
+        System.out.println(" ======= Choose Orientation =======");
+        System.out.println("1. North-East (NE) ");
+        System.out.println("2. North-West (NO) ");
+        System.out.println("3. South-West (SO) ");
+        System.out.println("4. South-East (SE) ");
+        return d;
+    }
+
+    public static void printBannerMenu() {
+        System.out.print("                   UNIVERSIDAD DE LAS FUERZAS ARMADAS (ESPE)\n\n       ");
+        System.out.print(" CAREER: Engineering in Geospatial Technologies\n ");
+        System.out.print("PROGRAMMING FUNDAMENTALS \n");
+        System.out.println(" NRC:3285");
+
+        System.out.println(" ========= Coordinate Transformation =======");
+        System.out.println("1.Transformation from Rectangular to Geographic Coordinates ");
+        System.out.println("2.Transformation of Geographic Coordinates to Rectangular ");
+        System.out.println("0.Exit");
+        System.out.println("Enter your menu option --> ");
+    }
+
+    public static void TransformationFromRectangularToGeographicCoordinates(double x, double y) {
         double angleF;
         double p1 = x * x;
         double p2 = y * y;
@@ -126,7 +135,7 @@ public class HW12Functions {
 
     }
 
-     private static void TransformationFromRectangularToGeographicCoordinates1(double x, double y) {
+    public static void TransformationFromRectangularToGeographicCoordinates1(double x, double y) {
         double angleF;
         double p1 = x * x;
         double p2 = y * y;
@@ -134,9 +143,21 @@ public class HW12Functions {
         double angleC = Math.atan(y / x);
         double angle = Math.toDegrees(angleC);
         angleF = (90 - angle);
-       System.out.println("The coordinate is :  " + String.format("%.2f", Math.sqrt(p3)) + ", S" + String.format("%.2f", angleF) + "ºO");
-     }
-    private static void transformFromNorthToEast(double ann, double d) {
+        System.out.println("The coordinate is :  " + String.format("%.2f", Math.sqrt(p3)) + ", S" + String.format("%.2f", angleF) + "ºO");
+    }
+
+    public static void TransformationFromRectangularToGeographicCoordinates2(double x, double y) {
+        double angleF;
+        double p1 = x * x;
+        double p2 = y * y;
+        double p3 = p1 + p2;
+        double angleC = Math.atan(y / x);
+        double angle = Math.toDegrees(angleC);
+        angleF = (90 + angle);
+        System.out.println("The coordinate is :  " + String.format("%.2f", Math.sqrt(p3)) + ", S" + String.format("%.2f", angleF) + "ºE");
+    }
+
+    public static void transformFromNorthToEast(double ann, double d) {
         double x2;
         double y2;
         double annr = Math.toRadians(ann);
@@ -147,7 +168,7 @@ public class HW12Functions {
         System.out.println("The coordinate is:  X=" + String.format("%.2f", x2) + ", Y=" + String.format("%.2f", y2));
     }
 
-    private static void transformFromNorthToWest(double ann1, double d) {
+    public static void transformFromNorthToWest(double ann1, double d) {
         double x3;
         double y3;
         double annr1 = Math.toRadians(ann1);
@@ -158,7 +179,7 @@ public class HW12Functions {
         System.out.println("The coordinate is:  X=-" + String.format("%.2f", x3) + ", Y=" + String.format("%.2f", y3));
     }
 
-    private static void transformFromSouthToWest(double ann2, double d) {
+    public static void transformFromSouthToWest(double ann2, double d) {
         double x4;
         double y4;
         double annr2 = Math.toRadians(ann2);
@@ -169,7 +190,7 @@ public class HW12Functions {
         System.out.println("The coordinate is:  X=-" + String.format("%.2f", x4) + ", Y=-" + String.format("%.2f", y4));
     }
 
-    private static void transnformFromSouthToEast(double ann3, double d) {
+    public static void transnformFromSouthToEast(double ann3, double d) {
         double x5;
         double y5;
         double annr3 = Math.toRadians(ann3);
