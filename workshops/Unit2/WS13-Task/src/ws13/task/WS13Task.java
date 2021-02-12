@@ -20,31 +20,46 @@ public class WS13Task {
         // TODO code application logic here
         
 
-    float result;
-    float area = 0;
-    float areaofpolygon;
-    float areaofcircle;
-    float formula=0;
-    float distance;
-    float force;
-    float work;
-     result = showTrapezoidArea(area);
-        System.out.println("th area of trapezoid is--->" + result );
-     
-      areaofpolygon = showRegularPolygonArea(area);
-        System.out.println("the area og regula polygon is -->"+ areaofpolygon);
+   System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n"
+                + "|             UNIVERSIDAD DE LAS FUERZAS ARMADAS              |\n"
+                + "|                         (ESPE)                              |\n"
+                + "| Programming Fundamentals                                    |\n"
+                + "| Programer: ERICK OCHOA                                      |\n"
+                + "| WS13 TASK                                                  |\n"
+                + "| CALCULATE TAXES                                             |\n"
+                + "-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n");
+        float result;
+        float area = 0;
+        float areaofpolygon;
+        float areaofcircle;
+        float formula = 0;
+        float distance;
+        float force;
+        float work;
+        System.out.println("TRAPEZOIDE AREA");
+        result = showTrapezoidArea(area);
+        System.out.println("th area of trapezoid is--->" + result);
 
-        areaofcircle= showCircleArea(area);
-        System.out.println("the area of circle is ->" + areaofcircle );
-        
+        System.out.println("REGULAR POLYGON AREA");
+        areaofpolygon = showRegularPolygonArea(area);
+        System.out.println("the area og regula polygon is -->" + areaofpolygon);
+
+        System.out.println("CIRCLE AREA");
+        areaofcircle = showCircleArea(area);
+        System.out.println("the area of circle is ->" + areaofcircle);
+
+        System.out.println("FOMULA OF DISTANCE MRUV");
         distance = showFormulaOfDistance(formula);
         System.out.println("the distance traveled is --> " + distance);
-        
+
+        System.out.println("FORMULA OF FORCE");
         force = showFomulaOfForce(formula);
-        System.out.println(" the force is -->"  + force );
-        
-        work= showFomulaOfWork(formula);
-        System.out.println(" the work is -->"  + work );
+        System.out.println(" the force is -->" + force);
+
+        System.out.println("FORMULA OF WORK");
+        work = showFomulaOfWork(formula);
+        System.out.println(" the work is -->" + work);
+
     
     
     }
