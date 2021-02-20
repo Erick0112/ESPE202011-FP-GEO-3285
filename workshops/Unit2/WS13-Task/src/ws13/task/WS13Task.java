@@ -105,7 +105,7 @@ public class WS13Task {
                 + "| Programming Fundamentals                                    |\n"
                 + "| Programer: ERICK OCHOA                                      |\n"
                 + "| WS13 TASK                                                   |\n"
-                + "| CALCULATE TAXES                                             |\n"
+                + "| CALCULATE TASK                                              |\n"
                 + "-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n");
     }
 
