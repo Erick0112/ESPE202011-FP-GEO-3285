@@ -38,22 +38,70 @@ public class ArraysQuiz22thFebruary {
           for (String candidatesNames : candidatesNames ){
             System.out.println(" Names of candidates ->" + candidatesNames);
            
+                  
         
-         
-         
+        
+        
+        
+        
+    
+            
+
+
+    int totalOfCandidates = 0;
+        String[] candidates;
+        float [] porcentageOfVotes;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter the name of candidates to want  ->");
+        totalOfCandidates = scanner.nextInt();
+
+        candidates = new String[totalOfCandidates];
+        porcentageOfVotes = new float[totalOfCandidates];
+
+        for (int i = 0; i < totalOfCandidates; i++) {
+            scanner.nextLine();
+            System.out.print("Please enter the name of candidates" + i + "->");
+            candidates[i] = scanner.nextLine();
+            System.out.print("Please enter" + candidates[i] + "porcentage of votes - >");
+            porcentageOfVotes[i] = scanner.nextFloat();
+        }
+        System.out.println(" Candidate -> \t porcentage of votes ");
+        for (int i = 0; i < totalOfCandidates; i++) {
+            System.out.println(candidates[i] + "-> \t " + porcentageOfVotes[i]);
+        }
+          }
         }
         
+        }
+        
+
+          int totalOfCandidates = 0;
+        String[] candidates;
+        float [] porcentageOfVotes;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter the name of candidates to want  ->");
+        totalOfCandidates = scanner.nextInt();
+
+        candidates = new String[totalOfCandidates];
+        porcentageOfVotes = new float[totalOfCandidates];
+
+        for (int i = 0; i < totalOfCandidates; i++) {
+            scanner.nextLine();
+            System.out.print("Please enter the name of candidates" + i + "->");
+            candidates[i] = scanner.nextLine();
+            System.out.print("Please enter" + candidates[i] + "porcentage of votes - >"+"%");
+            porcentageOfVotes[i] = scanner.nextFloat();
+        }
+        System.out.println(" Candidate -> \t porcentage of votes ");
+        for (int i = 0; i < totalOfCandidates; i++) {
+            System.out.println(candidates[i] + "-> \t " + porcentageOfVotes[i] + "%");
+        }
+
     }
-    
 }
 
-  int n;
-        System.out.println("Enter the number of the candidates -> ");
-        n = input.nextInt();
-        candidatesName = new int[n];        
 
-        for (String candidates : candidates) {
-            System.out.println("candidates name -> " + candidates);
-        }
-        for (int i = 0; i < percentageOfCandidates.length ; i++) {
-            System.out.println("percentage of candidates " + (i + 1) + " -> " + percentageOfCandidates[i]);  
+
+      
