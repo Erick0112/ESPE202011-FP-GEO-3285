@@ -130,7 +130,7 @@ public class WS17TransposeMatrix {
                     } else if (i == m - 1) {
                         System.out.print("\t");
                     } else {
-                        System.out.print(" \t");
+                        System.out.print(" \t2");
                     }
                 }
             }
