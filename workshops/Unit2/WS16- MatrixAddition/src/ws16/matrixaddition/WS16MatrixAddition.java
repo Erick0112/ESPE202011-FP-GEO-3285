@@ -16,7 +16,9 @@ public class WS16MatrixAddition {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-      int a[][] = {{5, 7, 9}, {9, 5, 8}, {3, 2, 4}};
+      
+        System.out.println("Ochoa Erick" );
+        int a[][] = {{5, 7, 9}, {9, 5, 8}, {3, 2, 4}};
         int b[][] = {{8, 3, 5}, {-5, 4, -3}, {9, 10, 24}};
 
         //    5    7     9           8     3     5       13    10    14
