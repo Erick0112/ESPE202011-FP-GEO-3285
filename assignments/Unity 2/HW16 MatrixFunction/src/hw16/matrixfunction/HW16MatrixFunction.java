@@ -59,7 +59,7 @@ public class HW16MatrixFunction {
         c = substractTwoMatrices(m, n, a, b);
 
        
-        System.out.println("");
+        System.out.println(c);
     
         
         
