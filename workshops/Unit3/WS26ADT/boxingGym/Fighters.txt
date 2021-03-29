@@ -1,3 +1,4 @@
 
 Erick , 19 , 30.2 , false , 70.0
 Marcos Maidana , 37 , 150000.0 , false , 73.0
+Floyd Mayweather , 44 , 1.5E7 , false , 68.0

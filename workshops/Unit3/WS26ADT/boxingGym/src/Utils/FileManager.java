@@ -5,6 +5,7 @@
  */
 package Utils;
 
+import ec.edu.espe.boxingGym.view.FrmFighter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -45,5 +46,11 @@ saved = true;
     }
 return saved;
 }
+public static String read(String fileName  ){
+     return null;
 
 }
+}
+    
+
+

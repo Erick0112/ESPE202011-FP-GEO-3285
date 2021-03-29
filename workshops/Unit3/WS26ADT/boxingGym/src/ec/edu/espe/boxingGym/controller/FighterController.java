@@ -20,5 +20,14 @@ public class FighterController {
         FileManager.save(data, "Fighters");
 
     }
+    
+    public String  read(){
+        String data;
+        data = FileManager.read("fighters");
+        return data;
     }
+
+  
+
+}
 

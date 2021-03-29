@@ -7,6 +7,11 @@ package ec.edu.espe.boxingGym.view;
 
 import ec.edu.espe.boxingGym.controller.FighterController;
 import ec.edu.espe.boxingGym.model.Fighter;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -43,6 +48,9 @@ public class FrmFighter extends javax.swing.JFrame {
         cmbInjury = new javax.swing.JComboBox<>();
         txtWeight = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
+        btnShowFighters = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtPrintFigthers = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,14 +75,31 @@ public class FrmFighter extends javax.swing.JFrame {
             }
         });
 
+        btnShowFighters.setText("Show Fighters");
+        btnShowFighters.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowFightersActionPerformed(evt);
+            }
+        });
+
+        txtPrintFigthers.setColumns(20);
+        txtPrintFigthers.setRows(5);
+        jScrollPane1.setViewportView(txtPrintFigthers);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(69, 69, 69)
+                .addComponent(btnSave)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnShowFighters)
+                .addGap(59, 59, 59))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2)
@@ -92,9 +117,9 @@ public class FrmFighter extends javax.swing.JFrame {
                                 .addComponent(txtWeight, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(cmbInjury, javax.swing.GroupLayout.Alignment.LEADING, 0, 67, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnSave)
-                        .addGap(31, 31, 31)))
-                .addContainerGap(150, Short.MAX_VALUE))
+                        .addGap(37, 37, 37)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,9 +146,13 @@ public class FrmFighter extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                .addComponent(btnSave)
-                .addGap(38, 38, 38))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSave)
+                    .addComponent(btnShowFighters))
+                .addContainerGap())
         );
 
         pack();
@@ -150,6 +179,21 @@ public class FrmFighter extends javax.swing.JFrame {
         
  
     }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void btnShowFightersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowFightersActionPerformed
+       File file = new File("C:\\Users\\Pc\\Documents\\ERICK\\II semestre\\FUNDAMENTOS\\code\\ESPE202011-FP-GEO-3285\\workshops\\Unit3\\WS26ADT\\boxingGym\\Fighters.txt");
+        try {
+             
+            BufferedReader read = new BufferedReader(new FileReader(file));
+            String line = read.readLine();
+            while (line != null) {
+                txtPrintFigthers.append(line + "\n");
+                line = read.readLine();
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(FrmFighter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnShowFightersActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,6 +232,7 @@ public class FrmFighter extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
+    private javax.swing.JButton btnShowFighters;
     private javax.swing.JComboBox<String> cmbInjury;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -195,9 +240,11 @@ public class FrmFighter extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtEconomicProfit;
     private javax.swing.JTextField txtName;
+    private javax.swing.JTextArea txtPrintFigthers;
     private javax.swing.JTextField txtWeight;
     // End of variables declaration//GEN-END:variables
 }
