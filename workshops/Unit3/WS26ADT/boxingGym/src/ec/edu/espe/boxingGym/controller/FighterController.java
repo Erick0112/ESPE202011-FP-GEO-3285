@@ -16,7 +16,7 @@ public class FighterController {
     
     public void save(Fighter figther){
         
-    String data = figther.getName()+ " , " + figther.getAge() + " , " + figther.getEconomicaProfit() + " , " + figther.isSeriousInjury() + " , " + figther.getWeight() ;
+    String data = figther.getName()+ ";" + figther.getAge() + ";" + figther.getEconomicaProfit() + ";" + figther.isSeriousInjury() + ";" + figther.getWeight() ;
         FileManager.save(data, "Fighters");
 
     }

@@ -5,7 +5,6 @@
  */
 package Utils;
 
-import ec.edu.espe.boxingGym.view.FrmFighter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,8 +13,9 @@ import java.io.IOException;
  *
  * @author Pc
  */
-public  class FileManager {
- public static boolean createFile(String fileName) {
+public class FileManager {
+    
+    public static boolean createFile(String fileName) {
  boolean created = false;
  try { File file = new File(fileName + ".txt"); 
 if (file.createNewFile()) { 
@@ -46,11 +46,8 @@ saved = true;
     }
 return saved;
 }
-public static String read(String fileName  ){
-     return null;
 
+    public static String read(String houses) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
-}
-    
-
-
